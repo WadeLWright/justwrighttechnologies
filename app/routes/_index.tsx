@@ -47,7 +47,7 @@ export default function Index() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-32 mt-16"
+          className="text-center mb-32 mt-16 bg-gray"
         >
           <h2 className="text-7xl font-extrabold mb-8 bg-clip-text text-transparent bg-gradient-to-r from-gold via-yellow-400 to-gold">
             Innovating Across Digital Frontiers

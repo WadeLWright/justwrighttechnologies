@@ -34,6 +34,9 @@ export default function App() {
       </head>
       <body className="h-full bg-background text-foreground">
         <ThemeProvider>
+          <header className="p-4 bg-primary text-primary-foreground">
+            <div className="text-2xl font-bold">Logo Placeholder</div>
+          </header>
           <Outlet />
           <ScrollRestoration />
           <Scripts />

@@ -81,7 +81,7 @@ export default function Index() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.2 }}
-                  className="bg-[#FFFFFF] rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300 group hover:-translate-y-2 overflow-hidden"
+                  className="bg-[#FFFFFF] rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300 group hover:-translate-y-2 hover:scale-105 overflow-hidden"
                 >
                   <div className="bg-[#000000] p-4">
                     <brand.icon className="text-6xl text-[#FFD700] mb-4 mx-auto group-hover:scale-110 transition-transform duration-300" />
@@ -111,7 +111,7 @@ export default function Index() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="bg-[#FFFFFF] rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 group overflow-hidden"
+                  className="bg-[#FFFFFF] rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 group hover:scale-105 overflow-hidden"
                 >
                   <div className="bg-[#000000] p-4">
                     <item.icon className="text-5xl text-[#FFD700] mb-4 mx-auto group-hover:scale-110 transition-transform duration-300" />

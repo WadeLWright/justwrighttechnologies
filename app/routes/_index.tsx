@@ -55,7 +55,7 @@ export default function Index() {
           <p className="text-2xl mb-12 max-w-3xl mx-auto leading-relaxed">
             We're a family of innovative brands, each dedicated to pushing the boundaries of what's possible in the digital realm.
           </p>
-          <Button size="lg" className="bg-gold text-black hover:bg-yellow-400 transition-all duration-300 text-xl px-10 py-4 rounded-full shadow-lg hover:shadow-2xl transform hover:-translate-y-1">
+          <Button size="lg" className="bg-gold text-black hover:bg-yellow-500 transition-all duration-300 text-xl px-10 py-4 rounded-full shadow-lg hover:shadow-2xl transform hover:-translate-y-1">
             Explore Our Brands
           </Button>
         </motion.section>
@@ -99,7 +99,7 @@ export default function Index() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="bg-gray-800 p-8 rounded-2xl border border-gray-700/30 hover:border-gold/30 transition-all duration-300 group"
               >
-                <h4 className="text-2xl font-bold mb-4 text-gold group-hover:text-yellow-400 transition-colors">{item.title}</h4>
+                <h4 className="text-2xl font-bold mb-4 text-gold group-hover:text-yellow-500 transition-colors">{item.title}</h4>
                 <p className="text-gray-300 leading-relaxed">{item.description}</p>
               </motion.div>
             ))}
@@ -117,7 +117,7 @@ export default function Index() {
           <p className="mb-12 max-w-3xl mx-auto text-2xl leading-relaxed">
             Whether you're looking for tactical solutions, digital marketing expertise, or innovative educational tools, Just Wright Technologies has you covered.
           </p>
-          <Button size="lg" className="bg-gold text-black hover:bg-yellow-400 transition-all duration-300 text-xl px-10 py-4 rounded-full shadow-lg hover:shadow-2xl transform hover:-translate-y-1">
+          <Button size="lg" className="bg-gold text-black hover:bg-yellow-500 transition-all duration-300 text-xl px-10 py-4 rounded-full shadow-lg hover:shadow-2xl transform hover:-translate-y-1">
             Contact Us Today
           </Button>
         </motion.section>

@@ -12,7 +12,7 @@ export const meta: MetaFunction = () => {
 
 export default function Index() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-800 text-white bg-noise">
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-800 text-white">
       <header className="w-full bg-black fixed top-0 z-50">
         <div className="container mx-auto flex justify-between items-center py-6 px-6">
           <motion.h1 

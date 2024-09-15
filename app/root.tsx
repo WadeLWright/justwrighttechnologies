@@ -6,7 +6,6 @@ import {
   ScrollRestoration,
 } from "@remix-run/react";
 import type { LinksFunction } from "@remix-run/node";
-import { ThemeProvider } from "./components/ThemeProvider";
 
 import "./tailwind.css";
 
@@ -33,14 +32,12 @@ export default function App() {
         <Links />
       </head>
       <body className="h-full bg-background text-foreground">
-        <ThemeProvider>
-          <header className="p-4 bg-primary text-primary-foreground">
-            <div className="text-2xl font-bold">Logo Placeholder</div>
-          </header>
-          <Outlet />
-          <ScrollRestoration />
-          <Scripts />
-        </ThemeProvider>
+        <header className="p-4 bg-primary text-primary-foreground">
+          <div className="text-2xl font-bold">Logo Placeholder</div>
+        </header>
+        <Outlet />
+        <ScrollRestoration />
+        <Scripts />
       </body>
     </html>
   );

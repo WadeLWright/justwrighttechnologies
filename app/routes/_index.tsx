@@ -1,6 +1,6 @@
 import type { MetaFunction } from "@remix-run/node";
 import { Button } from "~/components/ui/button";
-import { FaRocket, FaChartLine, FaBrain } from 'react-icons/fa';
+import { FaRocket, FaChartLine, FaBrain } from 'react-icons/fa6';
 
 export const meta: MetaFunction = () => {
   return [

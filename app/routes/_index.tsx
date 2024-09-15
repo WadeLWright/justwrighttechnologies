@@ -57,9 +57,6 @@ export default function Index() {
               <p className="text-2xl mb-12 leading-relaxed text-[#DFDFDF] max-w-lg">
                 We're a family of innovative brands, each dedicated to pushing the boundaries of what's possible in the digital realm.
               </p>
-              <Button size="lg" className="bg-[#FFD700] text-[#000000] hover:bg-[#636363] hover:text-[#FFFFFF] transition-all duration-300 text-xl px-12 py-6 rounded-full shadow-xl hover:shadow-2xl transform hover:-translate-y-1 font-bold">
-                Explore Our Brands <FaArrowRight className="ml-2 inline" />
-              </Button>
             </div>
             <div className="md:w-1/2">
               <img src="/hero-image.jpg" alt="Digital Innovation" className="rounded-2xl shadow-2xl" />

@@ -25,28 +25,6 @@
     --ring: 255 215 0;
     --radius: 0.5rem;
   }
-
-  .dark {
-    --background: 0 0 0;
-    --foreground: 255 255 255;
-    --card: 0 0 0;
-    --card-foreground: 255 255 255;
-    --popover: 0 0 0;
-    --popover-foreground: 255 255 255;
-    --primary: var(--primary-color, 255 215 0);
-    --primary-foreground: 0 0 0;
-    --secondary: var(--secondary-color, 99 99 99);
-    --secondary-foreground: 255 255 255;
-    --muted: 99 99 99;
-    --muted-foreground: 221 221 221;
-    --accent: 99 99 99;
-    --accent-foreground: 255 255 255;
-    --destructive: 127 0 0;
-    --destructive-foreground: 255 255 255;
-    --border: 99 99 99;
-    --input: 99 99 99;
-    --ring: 255 215 0;
-  }
 }
 
 @layer base {

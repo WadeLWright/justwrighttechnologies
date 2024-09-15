@@ -4,14 +4,12 @@ import {
   Outlet,
   Scripts,
   ScrollRestoration,
-  useLoaderData,
 } from "@remix-run/react";
-import type { LinksFunction, LoaderFunction } from "@remix-run/node";
-import { DarkModeToggle } from "./components/DarkModeToggle";
-import { useEffect, useState } from "react";
+import type { LinksFunction } from "@remix-run/node";
+import { ColorPicker } from "./components/DarkModeToggle";
 import { ThemeProvider } from "./components/ThemeProvider";
 
-import "./styles/tailwind.css";
+import "./tailwind.css";
 
 export const links: LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -26,22 +24,9 @@ export const links: LinksFunction = () => [
   },
 ];
 
-export const loader: LoaderFunction = async ({ request }) => {
-  const cookieHeader = request.headers.get("Cookie");
-  const theme = cookieHeader?.includes("theme=dark") ? "dark" : "light";
-  return { theme };
-};
-
 export default function App() {
-  const { theme: initialTheme } = useLoaderData<{ theme: string }>();
-  const [theme, setTheme] = useState(initialTheme);
-
-  useEffect(() => {
-    document.documentElement.classList.toggle("dark", theme === "dark");
-  }, [theme]);
-
   return (
-    <html lang="en" className={`h-full ${theme}`}>
+    <html lang="en" className="h-full">
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -51,7 +36,7 @@ export default function App() {
       <body className="h-full bg-background text-foreground">
         <ThemeProvider>
           <div className="fixed top-4 right-4 z-50">
-            <DarkModeToggle onThemeChange={setTheme} />
+            <ColorPicker />
           </div>
           <Outlet />
           <ScrollRestoration />

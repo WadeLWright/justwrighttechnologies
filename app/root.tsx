@@ -11,7 +11,6 @@ import type { LinksFunction, MetaFunction } from "@remix-run/node";
 import "./styles/tailwind.css";
 
 export const links: LinksFunction = () => [
-  { rel: "stylesheet", href: "/tailwind.css" },
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
   {
     rel: "preconnect",

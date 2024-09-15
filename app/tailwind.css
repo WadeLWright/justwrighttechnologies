@@ -10,9 +10,9 @@
     --card-foreground: 0 0 0;
     --popover: 255 255 255;
     --popover-foreground: 0 0 0;
-    --primary: 255 215 0;
+    --primary: var(--primary-color, 255 215 0);
     --primary-foreground: 0 0 0;
-    --secondary: 221 221 221;
+    --secondary: var(--secondary-color, 221 221 221);
     --secondary-foreground: 0 0 0;
     --muted: 221 221 221;
     --muted-foreground: 99 99 99;
@@ -33,9 +33,9 @@
     --card-foreground: 255 255 255;
     --popover: 0 0 0;
     --popover-foreground: 255 255 255;
-    --primary: 255 215 0;
+    --primary: var(--primary-color, 255 215 0);
     --primary-foreground: 0 0 0;
-    --secondary: 99 99 99;
+    --secondary: var(--secondary-color, 99 99 99);
     --secondary-foreground: 255 255 255;
     --muted: 99 99 99;
     --muted-foreground: 221 221 221;

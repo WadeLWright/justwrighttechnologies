@@ -81,11 +81,15 @@ export default function Index() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.2 }}
-                  className="bg-[#000000]/70 p-8 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300 group hover:-translate-y-2"
+                  className="bg-[#FFFFFF] rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300 group hover:-translate-y-2 overflow-hidden"
                 >
-                  <brand.icon className="text-6xl text-[#FFD700] mb-6 mx-auto group-hover:scale-110 transition-transform duration-300" />
-                  <h4 className="text-2xl font-bold mb-4 text-center text-[#FFFFFF]">{brand.title}</h4>
-                  <p className="text-center leading-relaxed text-[#DFDFDF]">{brand.description}</p>
+                  <div className="bg-[#000000] p-4">
+                    <brand.icon className="text-6xl text-[#FFD700] mb-4 mx-auto group-hover:scale-110 transition-transform duration-300" />
+                    <h4 className="text-2xl font-bold mb-2 text-center text-[#FFFFFF]">{brand.title}</h4>
+                  </div>
+                  <div className="p-6">
+                    <p className="text-center leading-relaxed text-[#000000]">{brand.description}</p>
+                  </div>
                 </motion.div>
               ))}
             </div>
@@ -107,11 +111,15 @@ export default function Index() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="bg-[#000000]/50 p-8 rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 group"
+                  className="bg-[#FFFFFF] rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 group overflow-hidden"
                 >
-                  <item.icon className="text-5xl text-[#FFD700] mb-6 group-hover:scale-110 transition-transform duration-300" />
-                  <h4 className="text-xl font-bold mb-4 text-[#FFFFFF] group-hover:text-[#FFD700] transition-colors">{item.title}</h4>
-                  <p className="text-[#DFDFDF] leading-relaxed">{item.description}</p>
+                  <div className="bg-[#000000] p-4">
+                    <item.icon className="text-5xl text-[#FFD700] mb-4 mx-auto group-hover:scale-110 transition-transform duration-300" />
+                    <h4 className="text-xl font-bold mb-2 text-center text-[#FFFFFF]">{item.title}</h4>
+                  </div>
+                  <div className="p-6">
+                    <p className="text-[#000000] leading-relaxed">{item.description}</p>
+                  </div>
                 </motion.div>
               ))}
             </div>

@@ -12,7 +12,7 @@ export const meta: MetaFunction = () => {
 
 export default function Index() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-800 text-white">
+    <div className="min-h-screen bg-gray-900 text-white">
       <header className="w-full bg-black fixed top-0 z-50">
         <div className="container mx-auto flex justify-between items-center py-6 px-6">
           <motion.h1 
@@ -49,7 +49,7 @@ export default function Index() {
           transition={{ duration: 0.8 }}
           className="text-center mb-32 mt-16 bg-gray"
         >
-          <h2 className="text-7xl font-extrabold mb-8 bg-clip-text text-transparent bg-gradient-to-r from-gold via-yellow-400 to-gold">
+          <h2 className="text-6xl font-extrabold mb-8 text-gold">
             Innovating Across Digital Frontiers
           </h2>
           <p className="text-2xl mb-12 max-w-3xl mx-auto leading-relaxed">
@@ -73,7 +73,7 @@ export default function Index() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.2 }}
-                className="bg-gradient-to-br from-gray-800/80 to-gray-900/80 p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 backdrop-blur-sm border border-gray-700/50 group hover:-translate-y-2"
+                className="bg-gray-800 p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 border border-gray-700/50 group hover:-translate-y-2"
               >
                 <brand.icon className="text-6xl text-gold mb-8 mx-auto group-hover:scale-110 transition-transform duration-300" />
                 <h4 className="text-2xl font-bold mb-6 text-center">{brand.title}</h4>
@@ -97,7 +97,7 @@ export default function Index() {
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-gradient-to-br from-gray-800/40 to-gray-900/40 p-8 rounded-2xl backdrop-blur-sm border border-gray-700/30 hover:border-gold/30 transition-all duration-300 group"
+                className="bg-gray-800 p-8 rounded-2xl border border-gray-700/30 hover:border-gold/30 transition-all duration-300 group"
               >
                 <h4 className="text-2xl font-bold mb-4 text-gold group-hover:text-yellow-400 transition-colors">{item.title}</h4>
                 <p className="text-gray-300 leading-relaxed">{item.description}</p>
@@ -117,7 +117,7 @@ export default function Index() {
           <p className="mb-12 max-w-3xl mx-auto text-2xl leading-relaxed">
             Whether you're looking for tactical solutions, digital marketing expertise, or innovative educational tools, Just Wright Technologies has you covered.
           </p>
-          <Button size="lg" className="bg-gradient-to-r from-gold to-yellow-400 text-black hover:from-yellow-400 hover:to-gold transition-all duration-300 text-xl px-10 py-4 rounded-full shadow-lg hover:shadow-2xl transform hover:-translate-y-1">
+          <Button size="lg" className="bg-gold text-black hover:bg-yellow-400 transition-all duration-300 text-xl px-10 py-4 rounded-full shadow-lg hover:shadow-2xl transform hover:-translate-y-1">
             Contact Us Today
           </Button>
         </motion.section>

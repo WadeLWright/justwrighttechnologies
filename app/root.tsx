@@ -8,7 +8,8 @@ import {
 } from "@remix-run/react";
 import type { LinksFunction, LoaderFunction } from "@remix-run/node";
 import { DarkModeToggle } from "./components/DarkModeToggle";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import { ThemeProvider } from "./components/ThemeProvider";
 
 import "./styles/tailwind.css";
 
@@ -32,7 +33,8 @@ export const loader: LoaderFunction = async ({ request }) => {
 };
 
 export default function App() {
-  const { theme } = useLoaderData<{ theme: string }>();
+  const { theme: initialTheme } = useLoaderData<{ theme: string }>();
+  const [theme, setTheme] = useState(initialTheme);
 
   useEffect(() => {
     document.documentElement.classList.toggle("dark", theme === "dark");
@@ -47,12 +49,14 @@ export default function App() {
         <Links />
       </head>
       <body className="h-full bg-background text-foreground">
-        <div className="fixed top-4 right-4 z-50">
-          <DarkModeToggle />
-        </div>
-        <Outlet />
-        <ScrollRestoration />
-        <Scripts />
+        <ThemeProvider>
+          <div className="fixed top-4 right-4 z-50">
+            <DarkModeToggle onThemeChange={setTheme} />
+          </div>
+          <Outlet />
+          <ScrollRestoration />
+          <Scripts />
+        </ThemeProvider>
       </body>
     </html>
   );

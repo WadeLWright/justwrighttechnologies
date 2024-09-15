@@ -1,8 +1,10 @@
 import { useState, useEffect } from 'react';
 import { Moon, Sun } from 'lucide-react';
+import { useTheme } from './ThemeProvider';
 
-export function DarkModeToggle() {
+export function DarkModeToggle({ onThemeChange }: { onThemeChange: (theme: 'light' | 'dark') => void }) {
   const [theme, setTheme] = useState<'light' | 'dark'>('light');
+  const { setPrimaryColor, setSecondaryColor } = useTheme();
 
   useEffect(() => {
     const savedTheme = localStorage.getItem('theme') as 'light' | 'dark' | null;
@@ -18,7 +20,16 @@ export function DarkModeToggle() {
   useEffect(() => {
     document.documentElement.classList.toggle('dark', theme === 'dark');
     localStorage.setItem('theme', theme);
-  }, [theme]);
+    onThemeChange(theme);
+
+    if (theme === 'dark') {
+      setPrimaryColor('#ffffff');
+      setSecondaryColor('#000000');
+    } else {
+      setPrimaryColor('#000000');
+      setSecondaryColor('#ffffff');
+    }
+  }, [theme, onThemeChange, setPrimaryColor, setSecondaryColor]);
 
   const toggleTheme = () => {
     setTheme(prevTheme => prevTheme === 'light' ? 'dark' : 'light');

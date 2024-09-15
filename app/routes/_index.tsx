@@ -4,7 +4,7 @@ import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "~/com
 
 export const meta: MetaFunction = () => {
   return [
-    { title: "JustWright Technologies" },
+    { title: "Just Wright Technologies" },
     { name: "description", content: "Innovative Solutions for Your Digital Needs" },
   ];
 };

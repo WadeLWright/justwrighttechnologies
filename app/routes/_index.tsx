@@ -81,10 +81,10 @@ export default function Index() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.2 }}
-                  className="bg-[#FFFFFF] rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300 group hover:-translate-y-2 hover:scale-105 overflow-hidden"
+                  className="bg-[#FFFFFF] rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 hover:scale-105 overflow-hidden"
                 >
                   <div className="bg-[#000000] p-4">
-                    <brand.icon className="text-6xl text-[#FFD700] mb-4 mx-auto group-hover:scale-110 transition-transform duration-300" />
+                    <brand.icon className="text-6xl text-[#FFD700] mb-4 mx-auto" />
                     <h4 className="text-2xl font-bold mb-2 text-center text-[#FFFFFF]">{brand.title}</h4>
                   </div>
                   <div className="p-6">
@@ -111,10 +111,10 @@ export default function Index() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="bg-[#FFFFFF] rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 group hover:scale-105 overflow-hidden"
+                  className="bg-[#FFFFFF] rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 overflow-hidden"
                 >
                   <div className="bg-[#000000] p-4">
-                    <item.icon className="text-5xl text-[#FFD700] mb-4 mx-auto group-hover:scale-110 transition-transform duration-300" />
+                    <item.icon className="text-5xl text-[#FFD700] mb-4 mx-auto" />
                     <h4 className="text-xl font-bold mb-2 text-center text-[#FFFFFF]">{item.title}</h4>
                   </div>
                   <div className="p-6">

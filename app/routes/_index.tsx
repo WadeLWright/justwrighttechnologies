@@ -12,7 +12,7 @@ export const meta: MetaFunction = () => {
 
 export default function Index() {
   return (
-    <div className="min-h-screen bg-lightGray text-black">
+    <div className="min-h-screen bg-gray-300 text-black">
       <header className="w-full bg-black fixed top-0 z-50">
         <div className="container mx-auto flex justify-between items-center py-4 px-6">
           <motion.h1 

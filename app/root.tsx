@@ -23,15 +23,6 @@ export const links: LinksFunction = () => [
 ];
 
 export default function App() {
-  if (typeof document === 'undefined') {
-    // This code only runs on the server
-    console.log('Server-side rendering: HTML attributes:', {
-      lang: 'en',
-      className: 'h-full',
-      // Log any other attributes that might be present
-    });
-  }
-
   return (
     <html lang="en" className="h-full">
       <head>

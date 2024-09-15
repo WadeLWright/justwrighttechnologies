@@ -42,12 +42,12 @@ export default function Index() {
         </div>
       </header>
 
-      <main className="container mx-auto px-6 pt-24">
+      <main className="container mx-auto px-6 pt-24 bg-gray">
         <motion.section 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-24 mt-16"
+          className="text-center mb-24 mt-16 "
         >
           <h2 className="text-5xl font-bold mb-6 text-black">
             Innovating Across Digital Frontiers

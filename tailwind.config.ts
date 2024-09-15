@@ -4,7 +4,7 @@ export default {
   darkMode: ["class"],
   content: [
     "./app/**/*.{js,jsx,ts,tsx}",
-    "./app/styles/tailwind.css",
+    "./app/tailwind.css",
   ],
   theme: {
     extend: {

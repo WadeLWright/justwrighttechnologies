@@ -4,9 +4,11 @@ import {
   Outlet,
   Scripts,
   ScrollRestoration,
+  useLoaderData,
 } from "@remix-run/react";
-import type { LinksFunction } from "@remix-run/node";
+import type { LinksFunction, LoaderFunction } from "@remix-run/node";
 import { DarkModeToggle } from "./components/DarkModeToggle";
+import { useEffect } from "react";
 
 import "./styles/tailwind.css";
 
@@ -23,9 +25,21 @@ export const links: LinksFunction = () => [
   },
 ];
 
+export const loader: LoaderFunction = async ({ request }) => {
+  const cookieHeader = request.headers.get("Cookie");
+  const theme = cookieHeader?.includes("theme=dark") ? "dark" : "light";
+  return { theme };
+};
+
 export default function App() {
+  const { theme } = useLoaderData<{ theme: string }>();
+
+  useEffect(() => {
+    document.documentElement.classList.toggle("dark", theme === "dark");
+  }, [theme]);
+
   return (
-    <html lang="en" className="h-full">
+    <html lang="en" className={`h-full ${theme}`}>
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />

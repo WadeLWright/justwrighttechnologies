@@ -6,6 +6,7 @@ import {
   ScrollRestoration,
 } from "@remix-run/react";
 import type { LinksFunction } from "@remix-run/node";
+import { DarkModeToggle } from "./components/DarkModeToggle";
 
 import "./styles/tailwind.css";
 
@@ -32,6 +33,9 @@ export default function App() {
         <Links />
       </head>
       <body className="h-full">
+        <div className="fixed top-4 right-4 z-50">
+          <DarkModeToggle />
+        </div>
         <Outlet />
         <ScrollRestoration />
         <Scripts />

@@ -1,40 +1,72 @@
-# Welcome to Remix!
+# Just Wright Technologies Website
 
-- 📖 [Remix docs](https://remix.run/docs)
+This project is a Remix-based website for Just Wright Technologies, featuring dynamic color customization.
 
-## Development
+## Features
 
-Run the dev server:
+- Built with Remix and React
+- Tailwind CSS for styling
+- Dynamic color customization
+- Responsive design
 
-```shellscript
+## Getting Started
+
+### Prerequisites
+
+- Node.js (v20.0.0 or later)
+- npm (comes with Node.js)
+
+### Installation
+
+1. Clone the repository:
+   ```
+   git clone https://github.com/your-username/justwrighttechnologies.git
+   cd justwrighttechnologies
+   ```
+
+2. Install dependencies:
+   ```
+   npm install
+   ```
+
+### Development
+
+Run the development server:
+
+```
 npm run dev
 ```
 
-## Deployment
+The site will be available at `http://localhost:3000`.
 
-First, build your app for production:
+### Building for Production
 
-```sh
+Build the app:
+
+```
 npm run build
 ```
 
-Then run the app in production mode:
+### Running in Production
 
-```sh
+Start the production server:
+
+```
 npm start
 ```
 
-Now you'll need to pick a host to deploy it to.
+## Color Customization
 
-### DIY
+The website features dynamic color customization. Users can change the primary and secondary colors, which are applied throughout the site using Tailwind CSS and CSS variables.
 
-If you're familiar with deploying Node applications, the built-in Remix app server is production-ready.
+## Deployment
 
-Make sure to deploy the output of `npm run build`
+This app is ready for deployment on platforms that support Node.js applications. Make sure to set up your environment variables and build the app before deploying.
 
-- `build/server`
-- `build/client`
+## Contributing
 
-## Styling
+Contributions are welcome! Please feel free to submit a Pull Request.
 
-This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever css framework you prefer. See the [Vite docs on css](https://vitejs.dev/guide/features.html#css) for more information.
+## License
+
+This project is licensed under the MIT License.

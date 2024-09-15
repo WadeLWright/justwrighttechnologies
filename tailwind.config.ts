@@ -31,6 +31,7 @@ export default {
         white: '#ffffff',
         black: '#000000',
         border: '#e5e7eb', // Adding a default border color
+        background: '#ffffff', // Adding a default background color
       }
     }
   },

@@ -58,6 +58,14 @@ export default {
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
         ring: 'hsl(var(--ring))',
+        // Brand colors
+        brand: {
+          gold: '#ffd700',
+          gray: '#636363',
+          lightGray: '#dfdfdf',
+          white: '#ffffff',
+          black: '#000000',
+        },
       }
     }
   },

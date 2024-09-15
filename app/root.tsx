@@ -46,7 +46,7 @@ export default function App() {
         <Meta />
         <Links />
       </head>
-      <body className="h-full">
+      <body className="h-full bg-background text-foreground">
         <div className="fixed top-4 right-4 z-50">
           <DarkModeToggle />
         </div>

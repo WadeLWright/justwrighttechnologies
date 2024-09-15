@@ -41,3 +41,20 @@ export default function App() {
     </html>
   );
 }
+
+// Ensure consistent rendering between server and client
+export function ErrorBoundary() {
+  return (
+    <html lang="en" className="h-full">
+      <head>
+        <title>Error</title>
+        <Meta />
+        <Links />
+      </head>
+      <body className="h-full">
+        <h1>An error occurred</h1>
+        <Scripts />
+      </body>
+    </html>
+  );
+}

@@ -19,7 +19,7 @@ export function DarkModeToggle({ onThemeChange }: { onThemeChange: (theme: 'ligh
 
   useEffect(() => {
     document.documentElement.classList.toggle('dark', theme === 'dark');
-    localStorage.setItem('theme', theme);
+    localStorage.setItem('theme', JSON.stringify({ mode: theme }));
     onThemeChange(theme);
 
     if (theme === 'dark') {

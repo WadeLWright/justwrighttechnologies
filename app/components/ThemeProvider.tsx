@@ -24,9 +24,16 @@ export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ childre
   useEffect(() => {
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme) {
-      const { primaryColor: savedPrimary, secondaryColor: savedSecondary } = JSON.parse(savedTheme);
-      setPrimaryColor(savedPrimary);
-      setSecondaryColor(savedSecondary);
+      try {
+        const { primaryColor: savedPrimary, secondaryColor: savedSecondary } = JSON.parse(savedTheme);
+        if (savedPrimary && savedSecondary) {
+          setPrimaryColor(savedPrimary);
+          setSecondaryColor(savedSecondary);
+        }
+      } catch (error) {
+        console.error('Error parsing saved theme:', error);
+        // If there's an error, we'll use the default colors
+      }
     }
   }, []);
 

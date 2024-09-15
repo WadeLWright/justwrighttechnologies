@@ -32,9 +32,6 @@ export default function App() {
         <Links />
       </head>
       <body className="h-full bg-background text-foreground">
-        <header className="p-4 text-primary-foreground bg-black">
-          <div className="text-2xl font-bold">Logo Placeholder</div>
-        </header>
         <Outlet />
         <ScrollRestoration />
         <Scripts />

@@ -4,48 +4,48 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 0 0% 0%;
-    --card: 0 0% 100%;
-    --card-foreground: 0 0% 0%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 0%;
-    --primary: 51 100% 50%;
-    --primary-foreground: 0 0% 0%;
-    --secondary: 0 0% 87%;
-    --secondary-foreground: 0 0% 0%;
-    --muted: 0 0% 87%;
-    --muted-foreground: 0 0% 39%;
-    --accent: 0 0% 87%;
-    --accent-foreground: 0 0% 0%;
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 100%;
-    --border: 0 0% 87%;
-    --input: 0 0% 87%;
-    --ring: 51 100% 50%;
+    --background: 255 255 255;
+    --foreground: 0 0 0;
+    --card: 255 255 255;
+    --card-foreground: 0 0 0;
+    --popover: 255 255 255;
+    --popover-foreground: 0 0 0;
+    --primary: 255 215 0;
+    --primary-foreground: 0 0 0;
+    --secondary: 221 221 221;
+    --secondary-foreground: 0 0 0;
+    --muted: 221 221 221;
+    --muted-foreground: 99 99 99;
+    --accent: 221 221 221;
+    --accent-foreground: 0 0 0;
+    --destructive: 255 0 0;
+    --destructive-foreground: 255 255 255;
+    --border: 221 221 221;
+    --input: 221 221 221;
+    --ring: 255 215 0;
     --radius: 0.5rem;
   }
 
   .dark {
-    --background: 0 0% 0%;
-    --foreground: 0 0% 100%;
-    --card: 0 0% 0%;
-    --card-foreground: 0 0% 100%;
-    --popover: 0 0% 0%;
-    --popover-foreground: 0 0% 100%;
-    --primary: 51 100% 50%;
-    --primary-foreground: 0 0% 0%;
-    --secondary: 0 0% 39%;
-    --secondary-foreground: 0 0% 100%;
-    --muted: 0 0% 39%;
-    --muted-foreground: 0 0% 87%;
-    --accent: 0 0% 39%;
-    --accent-foreground: 0 0% 100%;
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 100%;
-    --border: 0 0% 39%;
-    --input: 0 0% 39%;
-    --ring: 51 100% 50%;
+    --background: 0 0 0;
+    --foreground: 255 255 255;
+    --card: 0 0 0;
+    --card-foreground: 255 255 255;
+    --popover: 0 0 0;
+    --popover-foreground: 255 255 255;
+    --primary: 255 215 0;
+    --primary-foreground: 0 0 0;
+    --secondary: 99 99 99;
+    --secondary-foreground: 255 255 255;
+    --muted: 99 99 99;
+    --muted-foreground: 221 221 221;
+    --accent: 99 99 99;
+    --accent-foreground: 255 255 255;
+    --destructive: 127 0 0;
+    --destructive-foreground: 255 255 255;
+    --border: 99 99 99;
+    --input: 99 99 99;
+    --ring: 255 215 0;
   }
 }
 

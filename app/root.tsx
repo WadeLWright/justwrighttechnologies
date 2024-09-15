@@ -31,7 +31,7 @@ export default function App() {
         <Meta />
         <Links />
       </head>
-      <body className="h-full bg-background text-foreground bg-gray">
+      <body className="h-full bg-background text-foreground bg-black">
         <header className="p-4 bg-primary text-primary-foreground">
           <div className="text-2xl font-bold">Logo Placeholder</div>
         </header>

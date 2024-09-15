@@ -30,6 +30,7 @@ export default {
         lightGray: '#dfdfdf',
         white: '#ffffff',
         black: '#000000',
+        border: '#e5e7eb', // Adding a default border color
       }
     }
   },

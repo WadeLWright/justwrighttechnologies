@@ -1,6 +1,7 @@
 import type { MetaFunction } from "@remix-run/node";
 import { Button } from "~/components/ui/button";
 import { FaRocket, FaChartLine, FaBrain } from 'react-icons/fa6';
+import { motion } from "framer-motion";
 
 export const meta: MetaFunction = () => {
   return [
@@ -11,80 +12,120 @@ export const meta: MetaFunction = () => {
 
 export default function Index() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-800 text-white">
-      <header className="w-full bg-black/50 backdrop-blur-md fixed top-0 z-50">
-        <div className="container mx-auto flex justify-between items-center py-4 px-6">
-          <h1 className="text-2xl font-bold text-gold">Just Wright Technologies</h1>
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-800 text-white bg-noise">
+      <header className="w-full bg-black/70 backdrop-blur-md fixed top-0 z-50">
+        <div className="container mx-auto flex justify-between items-center py-6 px-6">
+          <motion.h1 
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="text-3xl font-bold text-gold"
+          >
+            Just Wright Technologies
+          </motion.h1>
           <nav>
-            <ul className="flex space-x-6">
-              <li><a href="#services" className="hover:text-gold transition-colors">Services</a></li>
-              <li><a href="#about" className="hover:text-gold transition-colors">About</a></li>
-              <li><a href="#contact" className="hover:text-gold transition-colors">Contact</a></li>
+            <ul className="flex space-x-8">
+              {["Services", "About", "Contact"].map((item, index) => (
+                <motion.li
+                  key={item}
+                  initial={{ opacity: 0, y: -20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                >
+                  <a href={`#${item.toLowerCase()}`} className="hover:text-gold transition-colors text-lg">
+                    {item}
+                  </a>
+                </motion.li>
+              ))}
             </ul>
           </nav>
         </div>
       </header>
 
-      <main className="container mx-auto px-6 pt-24">
-        <section className="text-center mb-24 mt-16">
-          <h2 className="text-6xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-gold to-yellow-400">Innovating Across Digital Frontiers</h2>
-          <p className="text-xl mb-10 max-w-2xl mx-auto">We're a family of innovative brands, each dedicated to pushing the boundaries of what's possible in the digital realm.</p>
-          <Button size="lg" className="bg-gold text-black hover:bg-yellow-400 transition-colors text-lg px-8 py-3 rounded-full shadow-lg hover:shadow-xl transform hover:-translate-y-1">Explore Our Brands</Button>
-        </section>
+      <main className="container mx-auto px-6 pt-32">
+        <motion.section 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="text-center mb-32 mt-16"
+        >
+          <h2 className="text-7xl font-extrabold mb-8 bg-clip-text text-transparent bg-gradient-to-r from-gold via-yellow-400 to-gold">
+            Innovating Across Digital Frontiers
+          </h2>
+          <p className="text-2xl mb-12 max-w-3xl mx-auto leading-relaxed">
+            We're a family of innovative brands, each dedicated to pushing the boundaries of what's possible in the digital realm.
+          </p>
+          <Button size="lg" className="bg-gold text-black hover:bg-yellow-400 transition-all duration-300 text-xl px-10 py-4 rounded-full shadow-lg hover:shadow-2xl transform hover:-translate-y-1">
+            Explore Our Brands
+          </Button>
+        </motion.section>
 
-        <section id="services" className="mb-24">
-          <h3 className="text-4xl font-bold mb-12 text-center">Our Brands</h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-            <div className="bg-gray-800/50 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 backdrop-blur-sm">
-              <FaRocket className="text-5xl text-gold mb-6 mx-auto" />
-              <h4 className="text-2xl font-bold mb-4 text-center">JustWrightTactical.com</h4>
-              <p className="text-gray-300">Precision meets innovation. We deliver state-of-the-art tactical solutions for modern challenges, empowering professionals with the tools they need to succeed in high-stakes environments.</p>
-            </div>
-            <div className="bg-gray-800/50 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 backdrop-blur-sm">
-              <FaChartLine className="text-5xl text-gold mb-6 mx-auto" />
-              <h4 className="text-2xl font-bold mb-4 text-center">JustWrightDigital.com</h4>
-              <p className="text-gray-300">In the fast-paced world of digital marketing, we're your strategic partner. Our data-driven approaches and creative solutions help businesses thrive in the ever-evolving online landscape.</p>
-            </div>
-            <div className="bg-gray-800/50 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 backdrop-blur-sm">
-              <FaBrain className="text-5xl text-gold mb-6 mx-auto" />
-              <h4 className="text-2xl font-bold mb-4 text-center">JustWrightMath.com</h4>
-              <p className="text-gray-300">Making mathematics accessible and engaging for learners of all ages. Our interactive platform revolutionizes how math is taught, learned, and applied in the real world.</p>
-            </div>
+        <section id="services" className="mb-32">
+          <h3 className="text-5xl font-bold mb-16 text-center">Our Brands</h3>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+            {[
+              { icon: FaRocket, title: "JustWrightTactical.com", description: "Precision meets innovation. We deliver state-of-the-art tactical solutions for modern challenges, empowering professionals with the tools they need to succeed in high-stakes environments." },
+              { icon: FaChartLine, title: "JustWrightDigital.com", description: "In the fast-paced world of digital marketing, we're your strategic partner. Our data-driven approaches and creative solutions help businesses thrive in the ever-evolving online landscape." },
+              { icon: FaBrain, title: "JustWrightMath.com", description: "Making mathematics accessible and engaging for learners of all ages. Our interactive platform revolutionizes how math is taught, learned, and applied in the real world." }
+            ].map((brand, index) => (
+              <motion.div
+                key={brand.title}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.2 }}
+                className="bg-gradient-to-br from-gray-800/80 to-gray-900/80 p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 backdrop-blur-sm border border-gray-700/50 group hover:-translate-y-2"
+              >
+                <brand.icon className="text-6xl text-gold mb-8 mx-auto group-hover:scale-110 transition-transform duration-300" />
+                <h4 className="text-2xl font-bold mb-6 text-center">{brand.title}</h4>
+                <p className="text-gray-300 leading-relaxed">{brand.description}</p>
+              </motion.div>
+            ))}
           </div>
         </section>
 
-        <section id="about" className="mb-24">
-          <h3 className="text-4xl font-bold mb-12 text-center">Why Choose Just Wright Technologies?</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            <div className="bg-gray-800/30 p-6 rounded-xl backdrop-blur-sm">
-              <h4 className="text-xl font-bold mb-3 text-gold">Innovation at Our Core</h4>
-              <p>We're constantly pushing the envelope, developing solutions that anticipate tomorrow's challenges.</p>
-            </div>
-            <div className="bg-gray-800/30 p-6 rounded-xl backdrop-blur-sm">
-              <h4 className="text-xl font-bold mb-3 text-gold">Diverse Expertise</h4>
-              <p>Our varied portfolio allows us to approach problems from multiple angles, delivering comprehensive solutions.</p>
-            </div>
-            <div className="bg-gray-800/30 p-6 rounded-xl backdrop-blur-sm">
-              <h4 className="text-xl font-bold mb-3 text-gold">Quality Assurance</h4>
-              <p>Across all our brands, we maintain the highest standards of quality and reliability.</p>
-            </div>
-            <div className="bg-gray-800/30 p-6 rounded-xl backdrop-blur-sm">
-              <h4 className="text-xl font-bold mb-3 text-gold">Customer-Centric Approach</h4>
-              <p>Your success is our success. We work closely with our clients to ensure our solutions meet their unique needs.</p>
-            </div>
+        <section id="about" className="mb-32">
+          <h3 className="text-5xl font-bold mb-16 text-center">Why Choose Just Wright Technologies?</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-5xl mx-auto">
+            {[
+              { title: "Innovation at Our Core", description: "We're constantly pushing the envelope, developing solutions that anticipate tomorrow's challenges." },
+              { title: "Diverse Expertise", description: "Our varied portfolio allows us to approach problems from multiple angles, delivering comprehensive solutions." },
+              { title: "Quality Assurance", description: "Across all our brands, we maintain the highest standards of quality and reliability." },
+              { title: "Customer-Centric Approach", description: "Your success is our success. We work closely with our clients to ensure our solutions meet their unique needs." }
+            ].map((item, index) => (
+              <motion.div
+                key={item.title}
+                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="bg-gradient-to-br from-gray-800/40 to-gray-900/40 p-8 rounded-2xl backdrop-blur-sm border border-gray-700/30 hover:border-gold/30 transition-all duration-300 group"
+              >
+                <h4 className="text-2xl font-bold mb-4 text-gold group-hover:text-yellow-400 transition-colors">{item.title}</h4>
+                <p className="text-gray-300 leading-relaxed">{item.description}</p>
+              </motion.div>
+            ))}
           </div>
         </section>
 
-        <section id="contact" className="text-center mb-24">
-          <h3 className="text-4xl font-bold mb-8">Join Us on the Cutting Edge</h3>
-          <p className="mb-10 max-w-2xl mx-auto text-xl">Whether you're looking for tactical solutions, digital marketing expertise, or innovative educational tools, Just Wright Technologies has you covered.</p>
-          <Button size="lg" className="bg-gold text-black hover:bg-yellow-400 transition-colors text-lg px-8 py-3 rounded-full shadow-lg hover:shadow-xl transform hover:-translate-y-1">Contact Us Today</Button>
-        </section>
+        <motion.section 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          id="contact" 
+          className="text-center mb-32"
+        >
+          <h3 className="text-5xl font-bold mb-10">Join Us on the Cutting Edge</h3>
+          <p className="mb-12 max-w-3xl mx-auto text-2xl leading-relaxed">
+            Whether you're looking for tactical solutions, digital marketing expertise, or innovative educational tools, Just Wright Technologies has you covered.
+          </p>
+          <Button size="lg" className="bg-gradient-to-r from-gold to-yellow-400 text-black hover:from-yellow-400 hover:to-gold transition-all duration-300 text-xl px-10 py-4 rounded-full shadow-lg hover:shadow-2xl transform hover:-translate-y-1">
+            Contact Us Today
+          </Button>
+        </motion.section>
       </main>
 
-      <footer className="bg-black/50 backdrop-blur-md py-8">
+      <footer className="bg-black/70 backdrop-blur-md py-10">
         <div className="container mx-auto text-center">
-          <p>&copy; 2024 Just Wright Technologies. All rights reserved.</p>
+          <p className="text-gray-400">&copy; 2024 Just Wright Technologies. All rights reserved.</p>
         </div>
       </footer>
     </div>

@@ -6,7 +6,6 @@ import {
   ScrollRestoration,
 } from "@remix-run/react";
 import type { LinksFunction } from "@remix-run/node";
-import { ColorPicker } from "./components/DarkModeToggle";
 import { ThemeProvider } from "./components/ThemeProvider";
 
 import "./tailwind.css";
@@ -35,9 +34,6 @@ export default function App() {
       </head>
       <body className="h-full bg-background text-foreground">
         <ThemeProvider>
-          <div className="fixed top-4 right-4 z-50">
-            <ColorPicker />
-          </div>
           <Outlet />
           <ScrollRestoration />
           <Scripts />

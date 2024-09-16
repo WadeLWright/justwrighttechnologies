@@ -87,7 +87,6 @@ export default function Index() {
                 We're a family of innovative brands, each dedicated to pushing the boundaries of what's possible in the digital realm.
               </p>
               <Button 
-                size="lg" 
                 className="bg-[#FFD700] text-[#000000] hover:bg-[#FFFFFF] transition-all duration-300 text-xl px-12 py-4 rounded-full shadow-xl hover:shadow-2xl transform hover:-translate-y-1 font-bold"
                 onClick={scrollToBrands}
               >
@@ -174,7 +173,7 @@ export default function Index() {
             <p className="mb-12 max-w-3xl mx-auto text-2xl leading-relaxed text-[#DFDFDF]">
               Discover how Just Wright Technologies can propel your success in tactical solutions, digital marketing, and educational technology.
             </p>
-            <Button size="lg" className="bg-[#000000] text-[#FFD700] hover:bg-[#636363] transition-all duration-300 text-xl px-16 py-5 rounded-full shadow-xl hover:shadow-2xl transform hover:-translate-y-1 font-bold">
+            <Button className="bg-[#000000] text-[#FFD700] hover:bg-[#636363] transition-all duration-300 text-xl px-16 py-5 rounded-full shadow-xl hover:shadow-2xl transform hover:-translate-y-1 font-bold">
               Contact Us Today <FaArrowRight className="ml-2 inline" />
             </Button>
           </div>

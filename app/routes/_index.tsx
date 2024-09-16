@@ -36,10 +36,12 @@ export default function Index() {
             transition={{ duration: 0.5 }}
             className="flex items-center"
           >
-            <img src="/Logo50px.png" alt="Just Wright Technologies Logo" className="mr-3" />
-            <h1 className="text-3xl font-bold text-[#FFFFFF]">
-              Just Wright <span className="text-[#FFD700]">Technologies</span>
-            </h1>
+            <a href="/" className="flex items-center">
+              <img src="/Logo50px.png" alt="Just Wright Technologies Logo" className="mr-3" />
+              <h1 className="text-3xl font-bold text-[#FFFFFF]">
+                Just Wright <span className="text-[#FFD700]">Technologies</span>
+              </h1>
+            </a>
           </motion.div>
           <nav>
             <ul className="flex space-x-8">

@@ -13,6 +13,7 @@ export const meta: MetaFunction = () => {
 
 export default function Index() {
   const ref = useRef(null);
+  const brandsRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["start start", "end start"],
@@ -20,6 +21,10 @@ export default function Index() {
 
   const backgroundY = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
   const textY = useTransform(scrollYProgress, [0, 1], ["0%", "200%"]);
+
+  const scrollToBrands = useCallback(() => {
+    brandsRef.current?.scrollIntoView({ behavior: 'smooth' });
+  }, []);
 
   return (
     <div className="min-h-screen bg-[#000000] text-[#FFFFFF] font-sans overflow-hidden">
@@ -80,12 +85,7 @@ export default function Index() {
               <Button 
                 size="lg" 
                 className="bg-[#FFD700] text-[#000000] hover:bg-[#FFFFFF] transition-all duration-300 text-xl px-12 py-4 rounded-full shadow-xl hover:shadow-2xl transform hover:-translate-y-1 font-bold"
-                onClick={() => {
-                  const brandsSection = document.getElementById('services');
-                  if (brandsSection) {
-                    brandsSection.scrollIntoView({ behavior: 'smooth' });
-                  }
-                }}
+                onClick={scrollToBrands}
               >
                 Discover Our Brands <FaArrowRight className="ml-2 inline" />
               </Button>
@@ -93,7 +93,7 @@ export default function Index() {
           </div>
         </section>
 
-        <section id="services" className="py-32 bg-gradient-to-b from-[#000000] to-[#636363]">
+        <section ref={brandsRef} id="services" className="py-32 bg-gradient-to-b from-[#000000] to-[#636363]">
           <div className="container mx-auto px-6">
             <h3 className="text-6xl font-bold mb-16 text-center text-[#FFFFFF]">Our Brands</h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-12">

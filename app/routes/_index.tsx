@@ -12,8 +12,8 @@ export const meta: MetaFunction = () => {
 };
 
 export default function Index() {
-  const ref = useRef(null);
-  const brandsRef = useRef(null);
+  const ref = useRef<HTMLDivElement>(null);
+  const brandsRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["start start", "end start"],
@@ -63,7 +63,7 @@ export default function Index() {
       </header>
 
       <main>
-        <section ref={ref} className="relative h-screen flex items-center justify-center overflow-hidden">
+        <section ref={ref as React.RefObject<HTMLDivElement>} className="relative h-screen flex items-center justify-center overflow-hidden">
           <motion.div 
             className="absolute inset-0 z-0"
             style={{
@@ -95,7 +95,7 @@ export default function Index() {
           </div>
         </section>
 
-        <section ref={brandsRef} id="services" className="py-32 bg-gradient-to-b from-[#000000] to-[#636363]">
+        <section ref={brandsRef as React.RefObject<HTMLDivElement>} id="services" className="py-32 bg-gradient-to-b from-[#000000] to-[#636363]">
           <div className="container mx-auto px-6">
             <h3 className="text-6xl font-bold mb-16 text-center text-[#FFFFFF]">Our Brands</h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-12">

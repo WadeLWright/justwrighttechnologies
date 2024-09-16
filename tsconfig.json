@@ -16,6 +16,6 @@
       "~/*": ["./app/*"]
     },
     "noEmit": true,
-    "types": ["node", "vite/client", "@types/tailwindcss"]
+    "types": ["node", "vite/client"]
   }
 }

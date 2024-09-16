@@ -100,7 +100,7 @@ export default function Index() {
             <h3 className="text-6xl font-bold mb-16 text-center text-[#FFFFFF]">Our Brands</h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
               {[
-                { icon: FaChartLine, title: "JustWrightDigital.com", description: "Data-driven digital marketing strategies for business growth." },
+                { icon: FaChartLine, title: "JustWrightDigital.com", description: "At Just Wright Digital, we believe that creativity knows no bounds. Our Etsy shop is dedicated to providing high-quality digital art resources that spark imagination and empower creative individuals like you to bring your visions to life.", url: "https://justwrightdigital.etsy.com" },
                 { icon: FaBrain, title: "JustWrightMath.com", description: "Revolutionary interactive platform for mathematics education." },
                 { icon: FaRocket, title: "JustWrightTactical.com", description: "State-of-the-art tactical solutions for modern challenges." }
               ].map((brand, index) => (
@@ -112,6 +112,7 @@ export default function Index() {
                   viewport={{ once: true }}
                   whileHover={{ y: -16, scale: 1.05 }}
                   className="bg-[#FFFFFF] rounded-3xl shadow-xl overflow-hidden group cursor-pointer"
+                  onClick={() => brand.url && window.open(brand.url, '_blank')}
                 >
                   <div className="bg-[#000000] p-8 group-hover:bg-[#FFD700] transition-colors duration-300">
                     <brand.icon className="text-7xl text-[#FFD700] group-hover:text-[#000000] mb-6 mx-auto transition-colors duration-300" />

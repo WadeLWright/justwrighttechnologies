@@ -1,7 +1,7 @@
 import type { MetaFunction } from "@remix-run/node";
 import { Button } from "~/components/ui/button";
 import { FaRocket, FaChartLine, FaBrain, FaLightbulb, FaPuzzlePiece, FaUsers, FaShieldAlt, FaArrowRight } from 'react-icons/fa';
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
 import { useRef, useCallback } from "react";
 
 export const meta: MetaFunction = () => {
@@ -110,13 +110,8 @@ export default function Index() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.2 }}
                   viewport={{ once: true }}
-                  className="bg-[#FFFFFF] rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-4 hover:scale-105 overflow-hidden group"
-                  style={{
-                    boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
-                  }}
-                  whileHover={{
-                    boxShadow: '0 10px 25px rgba(0, 0, 0, 0.2)',
-                  }}
+                  whileHover={{ y: -16, scale: 1.05 }}
+                  className="bg-[#FFFFFF] rounded-3xl shadow-xl overflow-hidden group"
                 >
                   <div className="bg-[#000000] p-8 group-hover:bg-[#FFD700] transition-colors duration-300">
                     <brand.icon className="text-7xl text-[#FFD700] group-hover:text-[#000000] mb-6 mx-auto transition-colors duration-300" />
@@ -147,7 +142,8 @@ export default function Index() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="bg-[#FFFFFF] rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 overflow-hidden group"
+                  whileHover={{ scale: 1.05 }}
+                  className="bg-[#FFFFFF] rounded-3xl shadow-lg overflow-hidden group"
                 >
                   <div className="bg-[#000000] p-6 group-hover:bg-[#FFD700] transition-colors duration-300">
                     <item.icon className="text-6xl text-[#FFD700] group-hover:text-[#000000] mb-4 mx-auto transition-colors duration-300" />

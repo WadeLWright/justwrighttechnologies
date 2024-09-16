@@ -2,7 +2,7 @@ import type { MetaFunction } from "@remix-run/node";
 import { Button } from "~/components/ui/button";
 import { FaRocket, FaChartLine, FaBrain, FaLightbulb, FaPuzzlePiece, FaUsers, FaShieldAlt, FaArrowRight } from 'react-icons/fa';
 import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef } from "react";
+import { useRef, useCallback } from "react";
 
 export const meta: MetaFunction = () => {
   return [
@@ -77,7 +77,16 @@ export default function Index() {
               <p className="text-2xl mb-10 leading-relaxed text-[#DFDFDF] max-w-3xl mx-auto">
                 We're a family of innovative brands, each dedicated to pushing the boundaries of what's possible in the digital realm.
               </p>
-              <Button size="lg" className="bg-[#FFD700] text-[#000000] hover:bg-[#FFFFFF] transition-all duration-300 text-xl px-12 py-4 rounded-full shadow-xl hover:shadow-2xl transform hover:-translate-y-1 font-bold">
+              <Button 
+                size="lg" 
+                className="bg-[#FFD700] text-[#000000] hover:bg-[#FFFFFF] transition-all duration-300 text-xl px-12 py-4 rounded-full shadow-xl hover:shadow-2xl transform hover:-translate-y-1 font-bold"
+                onClick={() => {
+                  const brandsSection = document.getElementById('services');
+                  if (brandsSection) {
+                    brandsSection.scrollIntoView({ behavior: 'smooth' });
+                  }
+                }}
+              >
                 Discover Our Brands <FaArrowRight className="ml-2 inline" />
               </Button>
             </motion.div>

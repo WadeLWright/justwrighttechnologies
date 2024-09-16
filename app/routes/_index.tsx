@@ -110,7 +110,13 @@ export default function Index() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.2 }}
                   viewport={{ once: true }}
-                  className="bg-[#FFFFFF] rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 hover:scale-105 overflow-hidden group"
+                  className="bg-[#FFFFFF] rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-4 hover:scale-105 overflow-hidden group"
+                  style={{
+                    boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
+                  }}
+                  whileHover={{
+                    boxShadow: '0 10px 25px rgba(0, 0, 0, 0.2)',
+                  }}
                 >
                   <div className="bg-[#000000] p-8 group-hover:bg-[#FFD700] transition-colors duration-300">
                     <brand.icon className="text-7xl text-[#FFD700] group-hover:text-[#000000] mb-6 mx-auto transition-colors duration-300" />

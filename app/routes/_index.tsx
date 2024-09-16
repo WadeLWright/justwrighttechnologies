@@ -111,7 +111,7 @@ export default function Index() {
                   transition={{ duration: 0.5, delay: index * 0.2 }}
                   viewport={{ once: true }}
                   whileHover={{ y: -16, scale: 1.05 }}
-                  className="bg-[#FFFFFF] rounded-3xl shadow-xl overflow-hidden group"
+                  className="bg-[#FFFFFF] rounded-3xl shadow-xl overflow-hidden group cursor-pointer"
                 >
                   <div className="bg-[#000000] p-8 group-hover:bg-[#FFD700] transition-colors duration-300">
                     <brand.icon className="text-7xl text-[#FFD700] group-hover:text-[#000000] mb-6 mx-auto transition-colors duration-300" />
@@ -143,7 +143,7 @@ export default function Index() {
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   viewport={{ once: true }}
                   whileHover={{ scale: 1.05 }}
-                  className="bg-[#FFFFFF] rounded-3xl shadow-lg overflow-hidden group"
+                  className="bg-[#FFFFFF] rounded-3xl shadow-lg overflow-hidden group cursor-pointer"
                 >
                   <div className="bg-[#000000] p-6 group-hover:bg-[#FFD700] transition-colors duration-300">
                     <item.icon className="text-6xl text-[#FFD700] group-hover:text-[#000000] mb-4 mx-auto transition-colors duration-300" />

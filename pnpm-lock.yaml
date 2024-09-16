@@ -14,12 +14,6 @@ importers:
       '@radix-ui/react-slot':
         specifier: ^1.1.0
         version: 1.1.0(@types/react@18.3.5)(react@18.3.1)
-      '@remix-run/node':
-        specifier: ^2.5.1
-        version: 2.12.0(typescript@5.6.2)
-      '@remix-run/react':
-        specifier: ^2.5.1
-        version: 2.12.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.6.2)
       '@remix-run/serve':
         specifier: ^2.5.1
         version: 2.12.0(typescript@5.6.2)

@@ -1,6 +1,6 @@
 # Just Wright Technologies Website
 
-This project is a Remix-based website for Just Wright Technologies, featuring dynamic color customization and a modern, responsive design.
+This project is a Remix-based website for Just Wright Technologies, featuring dynamic color customization, modern responsive design, and interactive animations.
 
 ## Features
 
@@ -9,6 +9,7 @@ This project is a Remix-based website for Just Wright Technologies, featuring dy
 - Dynamic color customization for brand flexibility
 - Fully responsive design for all device sizes
 - Dark mode support with easy toggling
+- Smooth animations and transitions using Framer Motion
 
 ## Getting Started
 
@@ -59,6 +60,10 @@ pnpm start
 ## Color Customization
 
 The website features dynamic color customization. Users can change the primary and secondary colors, which are applied throughout the site using Tailwind CSS and CSS variables. This allows for easy branding adjustments without modifying the codebase.
+
+## Animations
+
+We use Framer Motion for smooth, performant animations throughout the site. This library provides a simple API for creating complex animations and transitions.
 
 ## Deployment
 

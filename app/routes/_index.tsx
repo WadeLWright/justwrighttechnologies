@@ -89,9 +89,9 @@ export default function Index() {
             <h3 className="text-6xl font-bold mb-16 text-center text-[#FFFFFF]">Our Brands</h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
               {[
-                { icon: FaRocket, title: "JustWrightTactical.com", description: "State-of-the-art tactical solutions for modern challenges." },
                 { icon: FaChartLine, title: "JustWrightDigital.com", description: "Data-driven digital marketing strategies for business growth." },
-                { icon: FaBrain, title: "JustWrightMath.com", description: "Revolutionary interactive platform for mathematics education." }
+                { icon: FaBrain, title: "JustWrightMath.com", description: "Revolutionary interactive platform for mathematics education." },
+                { icon: FaRocket, title: "JustWrightTactical.com", description: "State-of-the-art tactical solutions for modern challenges." }
               ].map((brand, index) => (
                 <motion.div
                   key={brand.title}

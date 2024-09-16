@@ -16,6 +16,7 @@
       "~/*": ["./app/*"]
     },
     "noEmit": true,
-    "types": ["node", "@types/node", "vite/client"]
+    "types": [ "@types/node", "vite/client"]
+    
   }
 }

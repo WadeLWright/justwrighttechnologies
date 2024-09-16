@@ -8,7 +8,6 @@ This project is a Remix-based website for Just Wright Technologies, featuring dy
 - Styled with Tailwind CSS for rapid UI development
 - Dynamic color customization for brand flexibility
 - Fully responsive design for all device sizes
-- Dark mode support with easy toggling
 - Smooth animations and transitions using Framer Motion
 
 ## Getting Started

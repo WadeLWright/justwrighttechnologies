@@ -1,6 +1,6 @@
 import type { MetaFunction } from "@remix-run/node";
 import { Button } from "~/components/ui/button";
-import { FaFileImage, FaRocket, FaChartLine, FaBrain, FaLightbulb, FaPuzzlePiece, FaUsers, FaShieldAlt, FaArrowRight } from 'react-icons/fa';
+import { FaFileImage, FaLightbulb, FaPuzzlePiece, FaUsers, FaShieldAlt, FaArrowRight } from 'react-icons/fa';
 import { TbMathSymbols } from "react-icons/tb";
 import { ImTarget } from "react-icons/im";
 import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";

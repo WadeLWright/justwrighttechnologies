@@ -25,14 +25,17 @@ export default function Index() {
     <div className="min-h-screen bg-[#000000] text-[#FFFFFF] font-sans overflow-hidden">
       <header className="w-full bg-black/50 backdrop-blur-md fixed top-0 z-50">
         <div className="container mx-auto flex justify-between items-center py-4 px-6">
-          <motion.h1 
+          <motion.div 
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
-            className="text-3xl font-bold text-[#FFFFFF]"
+            className="flex items-center"
           >
-            Just Wright <span className="text-[#FFD700]">Technologies</span>
-          </motion.h1>
+            <img src="/Logo50px.png" alt="Just Wright Technologies Logo" className="mr-3" />
+            <h1 className="text-3xl font-bold text-[#FFFFFF]">
+              Just Wright <span className="text-[#FFD700]">Technologies</span>
+            </h1>
+          </motion.div>
           <nav>
             <ul className="flex space-x-8">
               {["Services", "About", "Contact"].map((item, index) => (

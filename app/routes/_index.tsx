@@ -101,8 +101,8 @@ export default function Index() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
               {[
                 { icon: FaChartLine, title: "JustWrightDigital.com", description: "At Just Wright Digital, we believe that creativity knows no bounds. Our Etsy shop is dedicated to providing high-quality digital art resources that spark imagination and empower creative individuals like you to bring your visions to life.", url: "https://justwrightdigital.etsy.com" },
-                { icon: FaBrain, title: "JustWrightMath.com", description: "Revolutionary interactive platform for mathematics education." },
-                { icon: FaRocket, title: "JustWrightTactical.com", description: "State-of-the-art tactical solutions for modern challenges." }
+                { icon: FaBrain, title: "JustWrightMath.com", description: "Revolutionary interactive platform for mathematics education.", url: "https://justwrightmath.com" },
+                { icon: FaRocket, title: "JustWrightTactical.com", description: "State-of-the-art tactical solutions for modern challenges.", url: "https://justwrighttactical.com" }
               ].map((brand, index) => (
                 <motion.div
                   key={brand.title}

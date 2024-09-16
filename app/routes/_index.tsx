@@ -1,6 +1,8 @@
 import type { MetaFunction } from "@remix-run/node";
 import { Button } from "~/components/ui/button";
-import { FaRocket, FaChartLine, FaBrain, FaLightbulb, FaPuzzlePiece, FaUsers, FaShieldAlt, FaArrowRight } from 'react-icons/fa';
+import { FaFileImage, FaRocket, FaChartLine, FaBrain, FaLightbulb, FaPuzzlePiece, FaUsers, FaShieldAlt, FaArrowRight } from 'react-icons/fa';
+import { TbMathSymbols } from "react-icons/tb";
+import { ImTarget } from "react-icons/im";
 import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
 import { useRef, useCallback } from "react";
 
@@ -67,7 +69,7 @@ export default function Index() {
           <motion.div 
             className="absolute inset-0 z-0"
             style={{
-              backgroundImage: "url('/hero-background.jpg')",
+              backgroundImage: "url('/hero-background.png')",
               backgroundPosition: "bottom",
               backgroundSize: "cover",
               y: backgroundY,
@@ -100,9 +102,9 @@ export default function Index() {
             <h3 className="text-6xl font-bold mb-16 text-center text-[#FFFFFF]">Our Brands</h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
               {[
-                { icon: FaChartLine, title: "JustWrightDigital.com", description: "At Just Wright Digital, we believe that creativity knows no bounds. Our Etsy shop is dedicated to providing high-quality digital art resources that spark imagination and empower creative individuals like you to bring your visions to life.", url: "https://justwrightdigital.etsy.com" },
-                { icon: FaBrain, title: "JustWrightMath.com", description: "Revolutionary interactive platform for mathematics education.", url: "https://justwrightmath.com" },
-                { icon: FaRocket, title: "JustWrightTactical.com", description: "State-of-the-art tactical solutions for modern challenges.", url: "https://justwrighttactical.com" }
+                { icon: FaFileImage, title: "JustWrightDigital.com", description: "At Just Wright Digital, we believe that creativity knows no bounds. Our Etsy shop is dedicated to providing high-quality digital art resources that spark imagination and empower creative individuals like you to bring your visions to life.", url: "https://justwrightdigital.etsy.com" },
+                { icon: TbMathSymbols , title: "JustWrightMath.com", description: "Revolutionary interactive platform for mathematics education.", url: "https://justwrightmath.com" },
+                { icon: ImTarget, title: "JustWrightTactical.com", description: "State-of-the-art tactical solutions for modern challenges.", url: "https://justwrighttactical.com" }
               ].map((brand, index) => (
                 <motion.div
                   key={brand.title}

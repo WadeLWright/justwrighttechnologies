@@ -67,7 +67,7 @@ export default function Index() {
       <main>
         <section ref={ref as React.RefObject<HTMLDivElement>} className="relative h-screen flex items-center justify-center overflow-hidden">
           <motion.div 
-            className="absolute inset-0 z-0"
+            className="absolute inset-0 z-0 hero-background"
             style={{
               backgroundImage: "url('/hero-background.png')",
               backgroundPosition: "bottom",

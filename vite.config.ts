@@ -8,7 +8,8 @@ export default defineConfig({
     alias: {
       '~': path.resolve(__dirname, './app'),
     },
-  },  plugins: [
+  },
+  plugins: [
     remix({
       future: {
         v3_fetcherPersist: true,
@@ -20,7 +21,7 @@ export default defineConfig({
   ],
 });
 
-console.log('-------------------------------------' );
+console.log('-------------------------------------');
 console.log('Current working directory:', process.cwd());
-console.log('Resolved alias path:', path.resolve(__dirname, './'));
-console.log('-------------------------------------' );
+console.log('Resolved alias path:', path.resolve(__dirname, './app'));
+console.log('-------------------------------------');

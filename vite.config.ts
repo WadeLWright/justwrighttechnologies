@@ -4,12 +4,6 @@ import { defineConfig } from "vite";
 import tsconfigPaths from "vite-tsconfig-paths";
 
 export default defineConfig({
-  root: '.', // Should point to the root of your project
-  resolve: {
-    alias: {
-      '~': path.resolve(__dirname, './'), // Adjust this path as needed
-    },
-  },
   plugins: [
     remix({
       future: {
@@ -21,3 +15,8 @@ export default defineConfig({
     tsconfigPaths(),
   ],
 });
+
+console.log('-------------------------------------' );
+console.log('Current working directory:', process.cwd());
+console.log('Resolved alias path:', path.resolve(__dirname, './'));
+console.log('-------------------------------------' );

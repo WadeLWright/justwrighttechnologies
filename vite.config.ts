@@ -4,7 +4,11 @@ import { defineConfig } from "vite";
 import tsconfigPaths from "vite-tsconfig-paths";
 
 export default defineConfig({
-  plugins: [
+  resolve: {
+    alias: {
+      '~': path.resolve(__dirname, './app'),
+    },
+  },  plugins: [
     remix({
       future: {
         v3_fetcherPersist: true,

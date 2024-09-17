@@ -12,10 +12,6 @@
     "allowJs": true,
     "forceConsistentCasingInFileNames": true,
     "baseUrl": ".",
-    "paths": {
-      "~/*": ["./app/*"],
-      "@/*": ["./app/*"]
-    },
     "noEmit": true,
     "types": [ "@types/node", "vite/client"]
     

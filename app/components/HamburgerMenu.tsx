@@ -27,15 +27,13 @@ const HamburgerMenu: React.FC = () => {
           <path d="M4 6h16M4 12h16M4 18h16"></path>
         </svg>
       </button>
-      {isOpen && (
-        <div className="absolute right-0 mt-2 w-48 bg-white border border-gray-300 rounded-md shadow-lg">
-          <div className="py-1">
-            <Link to="/" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Home</Link>
-            <Link to="/about" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">About</Link>
-            <Link to="/contact" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Contact</Link>
-          </div>
+      <div className={`absolute right-0 mt-2 w-48 bg-white border border-gray-300 rounded-md shadow-lg ${isOpen ? 'block' : 'hidden'}`}>
+        <div className="py-1">
+          <Link to="/" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Home</Link>
+          <Link to="/about" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">About</Link>
+          <Link to="/contact" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Contact</Link>
         </div>
-      )}
+      </div>
     </div>
   );
 };

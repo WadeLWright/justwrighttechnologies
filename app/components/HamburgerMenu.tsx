@@ -12,7 +12,7 @@ const HamburgerMenu: React.FC = () => {
     <div className="relative z-50">
       <button
         onClick={toggleMenu}
-        className="text-foreground focus:outline-none p-2 bg-gray-200 rounded-md"
+        className="text-foreground focus:outline-none p-2 bg-gray-200 rounded-md hover:bg-gray-300"
         aria-label="Toggle menu"
       >
         <svg

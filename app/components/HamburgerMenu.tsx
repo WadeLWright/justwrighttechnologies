@@ -9,10 +9,10 @@ const HamburgerMenu: React.FC = () => {
   };
 
   return (
-    <div className="relative">
+    <div className="relative z-50">
       <button
         onClick={toggleMenu}
-        className="text-foreground focus:outline-none"
+        className="text-foreground focus:outline-none p-2 bg-gray-200 rounded-md"
         aria-label="Toggle menu"
       >
         <svg
@@ -28,11 +28,11 @@ const HamburgerMenu: React.FC = () => {
         </svg>
       </button>
       {isOpen && (
-        <div className="absolute right-0 mt-2 w-48 bg-background border border-gray-300 rounded-md shadow-lg">
+        <div className="absolute right-0 mt-2 w-48 bg-white border border-gray-300 rounded-md shadow-lg">
           <div className="py-1">
-            <Link to="/" className="block px-4 py-2 text-sm text-foreground hover:bg-gray-100">Home</Link>
-            <Link to="/about" className="block px-4 py-2 text-sm text-foreground hover:bg-gray-100">About</Link>
-            <Link to="/contact" className="block px-4 py-2 text-sm text-foreground hover:bg-gray-100">Contact</Link>
+            <Link to="/" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Home</Link>
+            <Link to="/about" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">About</Link>
+            <Link to="/contact" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Contact</Link>
           </div>
         </div>
       )}

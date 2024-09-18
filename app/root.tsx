@@ -6,6 +6,7 @@ import {
   ScrollRestoration,
 } from "@remix-run/react";
 import type { LinksFunction } from "@remix-run/node";
+import HamburgerMenu from "./components/HamburgerMenu";
 
 import "./tailwind.css";
 
@@ -32,7 +33,14 @@ export default function App() {
         <Links />
       </head>
       <body className="h-full bg-background text-foreground">
-        <Outlet />
+        <header className="p-4">
+          <nav className="flex justify-end">
+            <HamburgerMenu />
+          </nav>
+        </header>
+        <main>
+          <Outlet />
+        </main>
         <ScrollRestoration />
         <Scripts />
       </body>

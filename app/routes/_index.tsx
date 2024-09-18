@@ -30,7 +30,7 @@ export default function Index() {
 
   return (
     <div className="min-h-screen bg-[#000000] text-[#FFFFFF] font-sans overflow-hidden">
-      <header className="w-full bg-black/50 backdrop-blur-md fixed top-0 z-50">
+      <header className="w-full bg-black fixed top-0 z-50">
         <div className="container mx-auto flex justify-between items-center py-4 px-6">
           <motion.div 
             initial={{ opacity: 0, x: -20 }}

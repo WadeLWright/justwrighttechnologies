@@ -47,7 +47,7 @@ export default function Index() {
           </motion.div>
           <nav>
             <ul className="flex space-x-8">
-              {["Services", "About", "Contact"].map((item, index) => (
+              {["Services", "Contact"].map((item, index) => (
                 <motion.li
                   key={item}
                   initial={{ opacity: 0, y: -10 }}
@@ -128,37 +128,6 @@ export default function Index() {
           </div>
         </section>
 
-        <section id="about" className="py-32 bg-gradient-to-b from-[#636363] to-[#000000]">
-          <div className="container mx-auto px-6">
-            <h3 className="text-6xl font-bold mb-16 text-center text-[#FFFFFF]">Why Choose Just Wright Technologies?</h3>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
-              {[
-                { icon: FaLightbulb, title: "Innovation", description: "Pushing the envelope with forward-thinking solutions." },
-                { icon: FaPuzzlePiece, title: "Expertise", description: "Diverse skills for comprehensive problem-solving." },
-                { icon: FaShieldAlt, title: "Quality", description: "Maintaining the highest standards across all brands." },
-                { icon: FaUsers, title: "Client-Focused", description: "Your success drives our dedication and approach." }
-              ].map((item, index) => (
-                <motion.div
-                  key={item.title}
-                  initial={{ opacity: 0, y: 50 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  whileHover={{ scale: 1.05 }}
-                  className="bg-[#FFFFFF] rounded-3xl shadow-lg overflow-hidden group cursor-pointer"
-                >
-                  <div className="bg-[#000000] p-6 group-hover:bg-[#FFD700] transition-colors duration-300">
-                    <item.icon className="text-6xl text-[#FFD700] group-hover:text-[#000000] mb-4 mx-auto transition-colors duration-300" />
-                    <h4 className="text-2xl font-bold mb-2 text-center text-[#FFFFFF] group-hover:text-[#000000] transition-colors duration-300">{item.title}</h4>
-                  </div>
-                  <div className="p-6">
-                    <p className="text-[#000000] leading-relaxed text-center">{item.description}</p>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
 
         <motion.section 
           initial={{ opacity: 0 }}

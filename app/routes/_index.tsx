@@ -40,14 +40,12 @@ export default function Index() {
           >
             <a href="/" className="flex items-center">
               <img src="/Logo50px.png" alt="Just Wright Technologies Logo" className="mr-3" />
-              <h1 className="text-3xl font-bold text-[#FFFFFF]">
-                Just Wright <span className="text-[#FFD700]">Technologies</span>
-              </h1>
+              <h1 className="text-3xl font-bold text-[#FFFFFF]">Just Wright <span className="text-[#FFD700]">Technologies</span></h1>
             </a>
           </motion.div>
           <nav>
             <ul className="flex space-x-8">
-              {["Services", "Contact"].map((item, index) => (
+              {["Services"].map((item, index) => (
                 <motion.li
                   key={item}
                   initial={{ opacity: 0, y: -10 }}
@@ -142,9 +140,6 @@ export default function Index() {
             <p className="mb-12 max-w-3xl mx-auto text-2xl leading-relaxed text-[#DFDFDF]">
               Discover how Just Wright Technologies can propel your success in tactical solutions, digital marketing, and educational technology.
             </p>
-            <Button className="bg-[#000000] text-[#FFD700] hover:bg-[#636363] transition-all duration-300 text-xl px-16 py-5 rounded-full shadow-xl hover:shadow-2xl transform hover:-translate-y-1 font-bold">
-              Contact Us Today <FaArrowRight className="ml-2 inline" />
-            </Button>
           </div>
         </motion.section>
       </main>

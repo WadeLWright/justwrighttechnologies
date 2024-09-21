@@ -84,13 +84,13 @@ export default function Index() {
                 Innovating Across <span className="text-[#FFD700]">Digital Frontiers</span>
               </h2>
               <p className="text-2xl mb-10 leading-relaxed text-[#DFDFDF] max-w-3xl mx-auto">
-                We're a family of innovative brands, each dedicated to pushing the boundaries of what's possible in the digital realm.
+                We're a family of innovative services, each dedicated to pushing the boundaries of what's possible in the digital realm.
               </p>
               <Button 
                 className="bg-[#FFD700] text-[#000000] hover:bg-[#FFFFFF] transition-all duration-300 text-xl px-12 py-4 rounded-full shadow-xl hover:shadow-2xl transform hover:-translate-y-1 font-bold"
                 onClick={scrollToBrands}
               >
-                Discover Our Brands <FaArrowRight className="ml-2 inline" />
+                Discover <FaArrowRight className="ml-2 inline" />
               </Button>
             </motion.div>
           </div>
@@ -98,12 +98,12 @@ export default function Index() {
 
         <section ref={brandsRef as React.RefObject<HTMLDivElement>} id="services" className="py-32 bg-gradient-to-b from-[#000000] to-[#636363]">
           <div className="container mx-auto px-6">
-            <h3 className="text-6xl font-bold mb-16 text-center text-[#FFFFFF]">Our Brands</h3>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+            <h3 className="text-6xl font-bold mb-16 text-center text-[#FFFFFF]">Our Services</h3>
+            <div className="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-12">
               {[
                 { icon: FaFileImage, title: "JustWrightDigital.com", description: "At Just Wright Digital, we believe that creativity knows no bounds. Our Etsy shop is dedicated to providing high-quality digital art resources that spark imagination and empower creative individuals like you to bring your visions to life.", url: "https://justwrightdigital.etsy.com" },
-                { icon: TbMathSymbols , title: "JustWrightMath.com", description: "Revolutionary interactive platform for mathematics education.", url: "https://justwrightmath.com" },
-                { icon: ImTarget, title: "JustWrightTactical.com", description: "State-of-the-art tactical solutions for modern challenges.", url: "https://justwrighttactical.com" }
+                { icon: TbMathSymbols , title: "MyMathTutor.ai", description: "Struggling to help your child with their math homework? No more saying 'that's not how we did it when I was in school.' Meet your new best friend in learning: mymathtutor.ai", url: "https://justwrightmath.com" }, 
+                { icon: ImTarget, title: "JustWrightTactical.com", description: "Equip yourself with the best at Just Wright Tactical. We offer premium tactical gear for professionals and enthusiasts who demand quality and performance. Our curated selection meets the highest standards. Don't just survive - thrive with Just Wright Tactical.", url: "https://justwrighttactical.com" } 
               ].map((brand, index) => (
                 <motion.div
                   key={brand.title}

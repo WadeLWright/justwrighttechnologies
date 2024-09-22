@@ -100,7 +100,7 @@ export default function Index() {
             <div className="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-12">
               {[
                 { icon: FaFileImage, title: "JustWrightDigital.com", description: "At Just Wright Digital, we believe that creativity knows no bounds. Our Etsy shop is dedicated to providing high-quality digital art resources that spark imagination and empower creative individuals like you to bring your visions to life.", url: "https://justwrightdigital.etsy.com" },
-                { icon: TbMathSymbols , title: "MyMathTutor.ai", description: "Struggling to help your child with their math homework? No more saying 'that's not how we did it when I was in school.' Meet your new best friend in learning: mymathtutor.ai", url: "https://justwrightmath.com" }, 
+                { icon: TbMathSymbols , title: "MyMathTutor.ai", description: "Struggling to help your child with their math homework? No more saying 'that's not how we did it when I was in school.' Meet your new best friend in learning: mymathtutor.ai", url: "https://mymathtutor.ai" }, 
                 { icon: ImTarget, title: "JustWrightTactical.com", description: "Equip yourself with the best at Just Wright Tactical. We offer premium tactical gear for professionals and enthusiasts who demand quality and performance. Our curated selection meets the highest standards. Don't just survive - thrive with Just Wright Tactical.", url: "https://justwrighttactical.com" } 
               ].map((brand, index) => (
                 <motion.div
